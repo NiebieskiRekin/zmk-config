@@ -7,14 +7,16 @@
     hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
-bt_safe_clr: bluetooth_safe_clear {
-    compatible = "zmk,behavior-tap-dance";
-    label = "BLUETOOTH_SAFE_CLEAR";
-    #binding-cells = <0>;
-    bindings = <&none>, <&none>, <&bt BT_CLR>;
-};
-
 / {
+    behaviors {
+        bt_safe_clr: bluetooth_safe_clear {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BLUETOOTH_SAFE_CLEAR";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>, <&bt BT_CLR>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
