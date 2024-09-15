@@ -7,7 +7,6 @@
     hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
-
 / {
     behaviors {
         bt_safe_clr: bluetooth_safe_clear {
@@ -16,7 +15,6 @@
             #binding-cells = <0>;
             bindings = <&none>, <&none>, <&bt BT_CLR>;
         };
-
     };
 
     combos {
@@ -52,7 +50,7 @@
         layer_2 {
             bindings = <
 &kp TAB    &kp EXCL         &kp AT      &kp HASH          &kp DLLR         &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&sk LCTRL  &soft_off        &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT       &kp DEL         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &mt APOS DOUBLE_QUOTES
+&sk LCTRL  &soft_off        &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT       &kp DEL         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &mt DOUBLE_QUOTES SINGLE_QUOTE
 &sk LSHFT  &mt TILDE GRAVE  &kp K_BACK  &kp K_FORWARD     &kp PRINTSCREEN  &kp LEFT_ALT    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp ESCAPE
                                         &kp LGUI          &trans           &kp SPACE       &kp RET    &trans     &kp RALT
             >;
